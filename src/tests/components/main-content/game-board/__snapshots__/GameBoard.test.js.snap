@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameBoard component should have "Game/Wins/Losses/Draws and Turn as column titles" 1`] = `
+<WithStyles(Paper)
+  className="paper-root"
+>
+  <WithStyles(Table)
+    id="rpc-table"
+  >
+    <WithStyles(TableHead)>
+      <WithStyles(TableRow)>
+        <WithStyles(TableCell)
+          align="left"
+          className="ngames"
+        >
+          GAMES
+        </WithStyles(TableCell)>
+        <WithStyles(TableCell)
+          align="left"
+          className="wins"
+        >
+          WINS
+        </WithStyles(TableCell)>
+        <WithStyles(TableCell)
+          align="left"
+          className="losses"
+        >
+          LOSSES
+        </WithStyles(TableCell)>
+        <WithStyles(TableCell)
+          align="left"
+          className="draws"
+        >
+          DRAWS
+        </WithStyles(TableCell)>
+        <WithStyles(TableCell)
+          align="left"
+          className="turn"
+        >
+          TURN
+        </WithStyles(TableCell)>
+      </WithStyles(TableRow)>
+    </WithStyles(TableHead)>
+    <WithStyles(TableBody)>
+      <WithStyles(TableRow)
+        className="score-row"
+      >
+        <WithStyles(TableCell)
+          align="left"
+          className="games"
+        />
+        <WithStyles(TableCell)
+          align="left"
+          className="wins"
+        />
+        <WithStyles(TableCell)
+          align="left"
+          className="losses"
+        />
+        <WithStyles(TableCell)
+          align="left"
+          className="draws"
+        />
+        <WithStyles(TableCell)
+          align="left"
+          className="isturn"
+        />
+      </WithStyles(TableRow)>
+    </WithStyles(TableBody)>
+  </WithStyles(Table)>
+</WithStyles(Paper)>
+`;

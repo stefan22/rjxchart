@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HandButton component should render HandButton correctly 1`] = `
+<div
+  className="col-4"
+>
+  <WithStyles(Paper)
+    className="game-hand"
+  >
+    <img
+      className="rps-button"
+      onClick={[Function]}
+    />
+    <WithStyles(Typography)
+      className="game-name"
+      component="h4"
+      gutterBottom={true}
+      variant="h4"
+    />
+  </WithStyles(Paper)>
+</div>
+`;

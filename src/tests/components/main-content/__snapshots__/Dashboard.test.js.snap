@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard component isLoading set to false should render dashboard page correctly 1`] = `
+<div
+  className="mid-section-wrapper loading"
+>
+  <div
+    className="inner-wrapper"
+  >
+    <Header
+      currentGameResult={null}
+      draws={0}
+      games={0}
+      losses={0}
+      turn="choose an opponent"
+      wins={0}
+    />
+    <section
+      className="midtop"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-12"
+          >
+            <WithStyles(Player)
+              imgsrc="eric.jpg"
+              name="Eric Cartman"
+              onPlayerChoice={[Function]}
+              playerNumber={1}
+            />
+            <WithStyles(InfoCard)
+              handleGameReset={[Function]}
+            />
+            <WithStyles(Player)
+              imgsrc="kyle.jpg"
+              name="Kyle Broflovski"
+              onPlayerChoice={[Function]}
+              playerNumber={2}
+            />
+            <WithStyles(Player)
+              imgsrc="computer.jpg"
+              name="Computer"
+              onPlayerChoice={[Function]}
+              playerNumber={3}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      className="midbottom"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-12"
+          >
+            <HandButton
+              choice="paper"
+              hand="Paper"
+              imgsrc="paper.png"
+              onPlayerHandPick={[Function]}
+            />
+            <HandButton
+              choice="rock"
+              hand="Rock"
+              imgsrc="rock.png"
+              onPlayerHandPick={[Function]}
+            />
+            <HandButton
+              choice="scissors"
+              hand="Scissors"
+              imgsrc="scissors.png"
+              onPlayerHandPick={[Function]}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Dashboard component isLoading set to true should render dashboard page correctly 1`] = `
+<div
+  className="mid-section-wrapper "
+>
+  <div
+    className="ball-loading"
+  >
+    Loading...
+  </div>
+</div>
+`;
