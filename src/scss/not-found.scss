@@ -1,0 +1,40 @@
+@import './App.scss';
+
+.not-found-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  .not-found-title {
+    font-weight: 400;
+    color: $redtext;
+  }
+  .back-button {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    .not-found-link {
+      display: inline-block;
+      font-size: 1.2rem;
+      color: $whitetext;
+      font-weight: $font-weight-light;
+      text-decoration: none;
+      border: 1px solid darken($blue,10);
+      background: lighten($blue,2);
+      border-radius: 4px;
+      padding: 1.5rem 5rem;
+      -webkit-transition: border .2s;
+      transition: border .2s;
+      &:hover {
+        border: 1px solid $whitetext;
+      }
+    }
+
+
+  }
+
+}
+
+
+
+
+
+

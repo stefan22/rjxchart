@@ -1,0 +1,35 @@
+@import './base/base';
+
+.mid-section-wrapper {
+  @include clearfix;
+  width: 100%;
+  opacity: 1;
+  flex: 1;
+
+  &.loading {
+    transition: background 1s, color 1s;
+
+  }
+  .ball-loading {
+    background: url(../images/ball.gif) no-repeat center center;
+    display: flex;
+    justify-content: space-around;
+    color: $balltext;
+    font-size: 1.25rem;
+    line-height: 16;
+    mix-blend-mode: luminosity;
+  }
+  .inner-dashboard {
+    min-height: 320px;
+    border-left:1px solid gray;
+    border-right:1px solid gray;
+    .midtop {
+      padding: 0 15px;
+    }
+    .midbottom {
+      padding: 0 15px;
+    }
+
+  }
+
+}

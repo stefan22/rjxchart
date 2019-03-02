@@ -1,0 +1,24 @@
+@import './scss/base/base.scss';
+
+/*
+ı. global
+°°°°°°°°°°°
+ */
+
+ html,
+ body {
+     width: 100vw;
+     min-height: 100vh;
+     margin: 0;
+     padding: 0;
+     font-size: $font-size;
+     box-sizing: border-box;
+ }
+
+ * {
+     font-family: $font-family;
+     color: $blacktext;
+     line-height: $font-height;
+     font-weight: $font-weight-regular;
+ }
+

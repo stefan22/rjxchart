@@ -1,0 +1,22 @@
+@import './base/base';
+
+/*
+ı. App
+°°°°°°°°
+ */
+
+ .page-wrapper {
+    background:$bgwhite;
+    .full-container {
+      display: flex;
+      flex-flow: column;
+      flex-wrap: wrap;
+      min-height: 100vh;
+    }
+
+
+
+
+} //page-wrapper
+
+
