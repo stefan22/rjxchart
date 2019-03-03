@@ -1,0 +1,98 @@
+@import './base/base';
+
+
+.table-wrapper {
+  width: 100%;
+  overflow: auto;
+  margin-bottom: 1.5rem;
+  .table {
+    width:100%;
+      thead {
+        background: $tablebg;
+        tr {
+          > th {
+            color: $headercolor;
+            font-size: $font-size;
+            font-weight: $font-weight-light;
+            i {
+              font-size:20px;
+              padding:3px 3px 0 15px;
+              vertical-align: sub;
+              color:lighten($bluereg, 35);
+
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          th {
+            font-size: $font-size;
+            color: $blacktext;
+            font-weight: $font-weight-regular;
+          }
+          td {
+            font-size: $font-size;
+            color: $blacktext;
+            font-weight: $font-weight-light;
+          }
+
+        }
+      }
+
+  }//table
+
+
+    .table2 {
+      .panelx {
+        overflow: auto;
+        width:100%;
+        .heading {
+          font-weight: $font-weight-regular;
+          font-size: $font-size;
+        }
+        thead {
+          background: $tablebg;
+          tr {
+            > th {
+              color: $headercolor;
+              font-size: $font-size;
+              font-weight: $font-weight-light;
+              i {
+                font-size:20px;
+                padding:3px 3px 0 15px;
+                vertical-align: sub;
+                color:lighten($bluereg, 35);
+
+              }
+            }
+          }
+        }
+        tbody {
+          tr {
+            th {
+              font-size: $font-size;
+              color: $blacktext;
+              font-weight: $font-weight-regular;
+            }
+            td {
+              font-size: $font-size;
+              color: $blacktext;
+              font-weight: $font-weight-light;
+            }
+
+          }
+        }
+
+      }
+    }//table2
+
+
+
+}
+
+
+/* fixes additional table > inner table display */
+div.MuiExpansionPanelDetails-root-129 {
+  display: flow-root;
+}
