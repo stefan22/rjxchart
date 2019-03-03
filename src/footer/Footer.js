@@ -4,14 +4,14 @@ import '../scss/Footer.scss';
 
 const Footer = (props) => (
 
-  <footer class="footer-wrapper">
-    <div class="container">
+  <footer className="footer-wrapper">
+    <div className="container">
       <div className='row'>
         <div className='col-12 footer'>
-          <div class="copyright">
+          <div className="copyright">
             <p>&copy; {props.footheading}</p>
           </div>
-          <div class="footer-links">
+          <div className="footer-links">
             <ul>
               <li>
                 <Link to='#'>{props.privacy}</Link>
