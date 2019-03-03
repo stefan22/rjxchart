@@ -24,41 +24,40 @@ const DataTable = (props) => {
         {(iskey > 0) ?
           <ExpansionPanel className='panelx'>
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography className='heading' variant='h6'>Additional Table</Typography>
+              <Typography className='heading' variant='h6'>Additional Table
+              </Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-              <Typography>
-                <Table>
-                  <TableHead>
-                    <TableRow>
-                      <TableCell>Table</TableCell>
-                      <TableCell align="right">
-                        <i class="material-icons">web_asset</i> P
-                      </TableCell>
-                      <TableCell align="right">
-                        <i class="material-icons">web_asset</i> Nu
-                      </TableCell>
-                      <TableCell align="right">
-                        <i class="material-icons">web_asset</i> Na
-                      </TableCell>
-                      <TableCell align="right">
-                        <i class="material-icons">web_asset</i> Ne
-                      </TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    <TableRow className='table-row'>
-                      <TableCell component="th" scope="row">
+              <Table>
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Table</TableCell>
+                    <TableCell align="right">
+                      <i className="material-icons">web_asset</i> P
+                    </TableCell>
+                    <TableCell align="right">
+                      <i className="material-icons">web_asset</i> Nu
+                    </TableCell>
+                    <TableCell align="right">
+                      <i className="material-icons">web_asset</i> Na
+                    </TableCell>
+                    <TableCell align="right">
+                      <i className="material-icons">web_asset</i> Ne
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  <TableRow className='table-row'>
+                    <TableCell component="th" scope="row">
                     Data for Table {iskey+1}
-                      </TableCell>
-                      <TableCell align="right">{p}</TableCell>
-                      <TableCell align="right">{nu}</TableCell>
-                      <TableCell align="right">{na}</TableCell>
-                      <TableCell align="right">{ne}</TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </Typography>
+                    </TableCell>
+                    <TableCell align="right">{p}</TableCell>
+                    <TableCell align="right">{nu}</TableCell>
+                    <TableCell align="right">{na}</TableCell>
+                    <TableCell align="right">{ne}</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
             </ExpansionPanelDetails>
           </ExpansionPanel>
 
@@ -69,16 +68,16 @@ const DataTable = (props) => {
               <TableRow>
                 <TableCell>Table</TableCell>
                 <TableCell align="right">
-                  <i class="material-icons">web_asset</i> P
+                  <i className="material-icons">web_asset</i> P
                 </TableCell>
                 <TableCell align="right">
-                  <i class="material-icons">web_asset</i> Nu
+                  <i className="material-icons">web_asset</i> Nu
                 </TableCell>
                 <TableCell align="right">
-                  <i class="material-icons">web_asset</i> Na
+                  <i className="material-icons">web_asset</i> Na
                 </TableCell>
                 <TableCell align="right">
-                  <i class="material-icons">web_asset</i> Ne
+                  <i className="material-icons">web_asset</i> Ne
                 </TableCell>
               </TableRow>
             </TableHead>

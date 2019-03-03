@@ -3,6 +3,7 @@ import '../../scss/dashboard.scss';
 import {bringBall} from '../Helpers';
 import data from '../data';
 import DataTable from './DataTable';
+import DoughnutChart from '../charts/DoughnutChart';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -10,8 +11,14 @@ class Dashboard extends Component {
     this.state = {
       isLoading: false,
       data: [],
+      dmax:null,
+      dheight:null,
+      dOptions: {
+        maintainAspectRadio:false,
+      },
     };
     this.getChartData = this.getChartData.bind(this);
+    this.setDoughnutChart = this.setDoughnutChart.bind(this);
 
   }
 
@@ -21,6 +28,7 @@ class Dashboard extends Component {
     });
 
     this.getChartData();
+    this.setDoughnutChart();
 
     setTimeout(() => {//optional
       this.setState((prevState) => ({
@@ -34,12 +42,24 @@ class Dashboard extends Component {
     return this.setState({
       data: cd,
     });
+  }
+
+  setDoughnutChart(dmx=750,dh='auto') {
+    let dmaxWidth = dmx;
+    let dheight = dh;
+
+    return this.setState({
+      dmax:dmaxWidth,
+      dheight:dheight,
+
+    });
 
   }
 
   render() {
-    const {isLoading, data} = this.state;
-    console.log(this);
+    const {
+      isLoading, data, dheight, dOptions,dmax} = this.state;
+
     return (
       <div className=
         {`mid-section-wrapper ${(isLoading) ? '' : 'loading'}`}>
@@ -50,7 +70,16 @@ class Dashboard extends Component {
               <div className='col-12'>
                 <div className='midtop'>
                   <h1>Dashboard Data</h1>
+                  {
+                    (data.length) &&
 
+                        <DoughnutChart
+                          width= {dmax}
+                          height= {dheight}
+                          options={dOptions}
+                          data={data}
+                        />
+                  }
 
                 </div>
               </div>
