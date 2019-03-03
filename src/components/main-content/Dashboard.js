@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
 import '../../scss/dashboard.scss';
 import {bringBall} from '../Helpers';
+import data from '../data';
+import DataTable from './DataTable';
 
 class Dashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isLoading: false,
+      data: [],
     };
+    this.getChartData = this.getChartData.bind(this);
 
   }
 
@@ -15,6 +19,9 @@ class Dashboard extends Component {
     this.setState({//bringBall
       isLoading: true,
     });
+
+    this.getChartData();
+
     setTimeout(() => {//optional
       this.setState((prevState) => ({
         isLoading: !prevState.isLoading,
@@ -22,8 +29,17 @@ class Dashboard extends Component {
     },2000);
   }
 
+  getChartData() {
+    let cd = data;
+    return this.setState({
+      data: cd,
+    });
+
+  }
+
   render() {
-    const {isLoading} = this.state;
+    const {isLoading, data} = this.state;
+    console.log(this);
     return (
       <div className=
         {`mid-section-wrapper ${(isLoading) ? '' : 'loading'}`}>
@@ -33,14 +49,30 @@ class Dashboard extends Component {
             <section className='row'>
               <div className='col-12'>
                 <div className='midtop'>
-                  Dashboard midtop component
+                  <h1>Dashboard Data</h1>
+
+
                 </div>
               </div>
             </section>
             <section className='row'>
               <div className='col-12'>
                 <div className='midbottom'>
-                  Dashboard midbottom
+                  <h3>Tables Data</h3>
+                  {
+                    (data.length) ?
+
+                      data.map((itm,idx) =>
+                        <DataTable
+                          key={idx}
+                          iskey={idx}
+                          {...itm}
+                        />
+                      )
+
+                      : 'no data avail'
+                  }
+
                 </div>
               </div>
             </section>
