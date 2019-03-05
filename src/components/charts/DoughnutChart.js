@@ -88,8 +88,8 @@ class DoughnutChart extends Component {
 
 
   render() {
-
-    const {datasets,tableData} = this.state;
+    console.log(this);
+    const {datasets,tableData,additionalData} = this.state;
     const {width,height} = this.props;
 
     const canvasStyling = {
@@ -105,7 +105,7 @@ class DoughnutChart extends Component {
 
     return (
       <div className='midcontainer'>
-        <h2>Doughnut</h2>
+        <h2>Doughnut {(additionalData) ? '' : 'with additional data.'}</h2>
 
         <section className='doughnut-canvas' style={canvasStyling}>
           <Doughnut

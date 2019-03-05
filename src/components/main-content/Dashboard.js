@@ -43,7 +43,7 @@ class Dashboard extends Component {
     });
   }
 
-  setDoughnutChart(dmx=750,dh='auto') {
+  setDoughnutChart(dmx=650,dh='auto') {
     let dmaxWidth = dmx;
     let dheight = dh;
 
