@@ -10,7 +10,8 @@ export const colors = {
   greenh:'rgba(142,251,14,1)',
 };
 
-export const labels = ['P','Nu','Na','Ne'];
+
+export const labels =  ['P','Ne','Nu','Na'];
 
 
 

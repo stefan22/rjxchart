@@ -14,7 +14,6 @@ import '../../scss/table.scss';
 
 
 const DataTable = (props) => {
-  console.log(props);
   const {p,nu,na,ne,iskey} = props;
 
   return (
@@ -23,7 +22,9 @@ const DataTable = (props) => {
 
         {(iskey > 0) ?
           <ExpansionPanel className='panelx'>
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <ExpansionPanelSummary
+              onClick={props.handleAdditionalData}
+              expandIcon={<ExpandMoreIcon />}>
               <Typography className='heading' variant='h6'>Additional Table
               </Typography>
             </ExpansionPanelSummary>
@@ -36,13 +37,13 @@ const DataTable = (props) => {
                       <i className="material-icons">web_asset</i> P
                     </TableCell>
                     <TableCell align="right">
+                      <i className="material-icons">web_asset</i> Ne
+                    </TableCell>
+                    <TableCell align="right">
                       <i className="material-icons">web_asset</i> Nu
                     </TableCell>
                     <TableCell align="right">
                       <i className="material-icons">web_asset</i> Na
-                    </TableCell>
-                    <TableCell align="right">
-                      <i className="material-icons">web_asset</i> Ne
                     </TableCell>
                   </TableRow>
                 </TableHead>
@@ -52,9 +53,9 @@ const DataTable = (props) => {
                     Data for Table {iskey+1}
                     </TableCell>
                     <TableCell align="right">{p}</TableCell>
+                    <TableCell align="right">{ne}</TableCell>
                     <TableCell align="right">{nu}</TableCell>
                     <TableCell align="right">{na}</TableCell>
-                    <TableCell align="right">{ne}</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -71,13 +72,13 @@ const DataTable = (props) => {
                   <i className="material-icons">web_asset</i> P
                 </TableCell>
                 <TableCell align="right">
+                  <i className="material-icons">web_asset</i> Ne
+                </TableCell>
+                <TableCell align="right">
                   <i className="material-icons">web_asset</i> Nu
                 </TableCell>
                 <TableCell align="right">
                   <i className="material-icons">web_asset</i> Na
-                </TableCell>
-                <TableCell align="right">
-                  <i className="material-icons">web_asset</i> Ne
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -87,21 +88,16 @@ const DataTable = (props) => {
                     Data for Table {iskey+1}
                 </TableCell>
                 <TableCell align="right">{p}</TableCell>
+                <TableCell align="right">{ne}</TableCell>
                 <TableCell align="right">{nu}</TableCell>
                 <TableCell align="right">{na}</TableCell>
-                <TableCell align="right">{ne}</TableCell>
               </TableRow>
             </TableBody>
           </Table>
 
-
         }
 
-
-
-
       </div>
-
     </Paper>
   );
 };;

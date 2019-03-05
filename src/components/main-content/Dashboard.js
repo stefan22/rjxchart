@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../../scss/dashboard.scss';
 import {bringBall} from '../Helpers';
 import data from '../data';
-import DataTable from './DataTable';
+
 import DoughnutChart from '../charts/DoughnutChart';
 
 class Dashboard extends Component {
@@ -19,7 +19,6 @@ class Dashboard extends Component {
     };
     this.getChartData = this.getChartData.bind(this);
     this.setDoughnutChart = this.setDoughnutChart.bind(this);
-
   }
 
   componentDidMount() {
@@ -56,6 +55,8 @@ class Dashboard extends Component {
 
   }
 
+
+
   render() {
     const {
       isLoading, data, dheight, dOptions,dmax} = this.state;
@@ -84,27 +85,8 @@ class Dashboard extends Component {
                 </div>
               </div>
             </section>
-            <section className='row'>
-              <div className='col-12'>
-                <div className='midbottom'>
-                  <h3>Tables Data</h3>
-                  {
-                    (data.length) ?
 
-                      data.map((itm,idx) =>
-                        <DataTable
-                          key={idx}
-                          iskey={idx}
-                          {...itm}
-                        />
-                      )
 
-                      : 'no data avail'
-                  }
-
-                </div>
-              </div>
-            </section>
           </div>
         }
 
