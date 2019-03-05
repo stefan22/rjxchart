@@ -27,6 +27,13 @@ It correctly bundles React in production mode and optimizes the build for the be
 - click on additional table to have it display in chart along with the original data.
 Click again to go back to initial data graph display.
 
+<br />
+
+
+
+![](src/images/chart.gif)
+
+
 
 <br />
 
