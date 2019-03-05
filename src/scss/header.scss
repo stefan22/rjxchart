@@ -1,34 +1,30 @@
 @import './base/base';
 
 .header-wrapper {
-  @include clearfix();
-  width:100%;
-  header {
-    background:$indilight;
-    button {
-      &.topbar-icon span svg{
-        fill: $svgchart-text;
-      }
-      &:hover {
-        background: $bghover-color;
-        transition: $bgtransition-svg;
-      }
-    }
-    i.material-icons {
-      color: $whitetext;
-      margin-right: 10px;
-    }
+	@include clearfix();
+	width: 100%;
+	header {
+		background: $indilight;
+		button {
+			&.topbar-icon span svg {
+				fill: $svgchart-text;
+			}
+			&:hover {
+				background: $bghover-color;
+				transition: $bgtransition-svg;
+			}
+		}
+		i.material-icons {
+			color: $whitetext;
+			margin-right: 10px;
+		}
 
-    .nav-home {
-      color: $whitetext;
-      text-decoration: none;
-      h6 {
-        font-weight: $font-weight-light;
-      }
-    }
-
-  }
-
+		.nav-home {
+			color: $whitetext;
+			text-decoration: none;
+			h6 {
+				font-weight: $font-weight-light;
+			}
+		}
+	}
 }
-
-

@@ -1,63 +1,38 @@
 @import './base/base';
 
 .footer-wrapper {
-  @include clearfix;
-  background:$indidark;
-  margin-top: 3rem;
-  .footer {
-    padding: 2rem 0;
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    .copyright {
-      padding:0 15px;
-      p {
-        color: $svgchart-text;
-        font-weight: $font-weight-light;
-      }
+	@include clearfix;
+	background: $indidark;
+	margin-top: 3rem;
+	.footer {
+		padding: 2rem 0;
+		display: flex;
+		flex-flow: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.copyright {
+			padding: 0 15px;
+			p {
+				color: $svgchart-text;
+				font-weight: $font-weight-light;
+			}
+		}
+		.footer-links {
+			text-align: right;
+			padding: 0 15px;
+			ul {
+				display: flex;
+				flex-flow: column;
 
-    }
-    .footer-links {
-      text-align: right;
-      padding: 0 15px;
-      ul {
-        display: flex;
-        flex-flow: column;
-
-        li {
-          padding: 5px 0;
-          a {
-            color: $svgchart-text;
-            font-weight: $font-weight-light;
-            text-decoration: none;
-          }
-        }
-      }
-    }
-
-
-
-  }
-
-
-
+				li {
+					padding: 5px 0;
+					a {
+						color: $svgchart-text;
+						font-weight: $font-weight-light;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
 }
-
-
-
-// .footer a {
-//   color: #FFF;
-//   text-decoration: none;
-// }
-// .footer p {
-//   margin-bottom: 12px;
-// }
-// .footer a:hover {
-//   text-decoration: underline;
-// }
-
-// .footer-links ul li {
-//   display: inline;
-//   margin-left: 12px;
-// }
