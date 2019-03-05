@@ -35,6 +35,3 @@ Click again to go back to initial data graph display.
 
 
 
-<br />
-
-![](src/images/data.png)
