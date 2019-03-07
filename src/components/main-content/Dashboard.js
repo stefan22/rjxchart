@@ -63,7 +63,6 @@ class Dashboard extends Component {
               </div>
             </section>
 
-
           </div>
         }
 
