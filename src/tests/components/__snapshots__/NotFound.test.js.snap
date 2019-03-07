@@ -2,19 +2,35 @@
 
 exports[`NotFound page component should render NotFound page correctly 1`] = `
 <div
-  className="not-found"
+  className="not-found-wrapper"
 >
-  <h2
-    className="not-found-title"
+  <div
+    className="container"
   >
-    Page Not Found
-  </h2>
-  <Link
-    className="not-found-link"
-    replace={false}
-    to="/"
-  >
-    Back to Homepage
-  </Link>
+    <div
+      className="row"
+    >
+      <div
+        className="col-12"
+      >
+        <h2
+          className="not-found-title text-center"
+        >
+          Page Not Found
+        </h2>
+        <div
+          className="back-button"
+        >
+          <Link
+            className="not-found-link text-center"
+            replace={false}
+            to="/"
+          >
+            Back to Homepage
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
