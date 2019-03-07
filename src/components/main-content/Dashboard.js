@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../../scss/dashboard.scss';
 import {bringBall} from '../Helpers';
-import data from '../data';
+import {tableData} from '../charts/chartHelper';
 
 import DoughnutChart from '../charts/DoughnutChart';
 
@@ -10,7 +10,7 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       isLoading: false,
-      data: [],
+      tableData: [],
       dmax:null,
       dheight:null,
       dOptions: {
@@ -37,9 +37,9 @@ class Dashboard extends Component {
   }
 
   getChartData() {
-    let cd = data;
+    let cd = tableData;
     return this.setState({
-      data: cd,
+      tableData: cd,
     });
   }
 
@@ -50,16 +50,12 @@ class Dashboard extends Component {
     return this.setState({
       dmax:dmaxWidth,
       dheight:dheight,
-
     });
-
   }
-
-
 
   render() {
     const {
-      isLoading, data, dheight, dOptions,dmax} = this.state;
+      isLoading, tableData, dheight, dOptions,dmax,legend} = this.state;
 
     return (
       <div className=
@@ -72,13 +68,14 @@ class Dashboard extends Component {
                 <div className='midtop'>
                   <h1>Dashboard Data</h1>
                   {
-                    (data.length) &&
+                    (tableData.length) &&
 
                         <DoughnutChart
                           width= {dmax}
                           height= {dheight}
                           options={dOptions}
-                          data={data}
+                          tableData={tableData}
+                          legend={legend}
                         />
                   }
 

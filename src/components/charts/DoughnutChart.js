@@ -3,47 +3,46 @@ import {labels,colors} from './chartHelper';
 import {Doughnut} from 'react-chartjs-2';
 import DataTable from '../main-content/DataTable';
 import '../../scss/doughnut.scss';
-import tableData from '../data';
+
 
 class DoughnutChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
       datasets: [],
-      tableData: [],
+      tableData: this.props.tableData,
       additionalData:true,
     };
     this.getDataSets = this.getDataSets.bind(this);
-    this.getTableData = this.getTableData.bind(this);
     this.handleAdditionalData = this.handleAdditionalData.bind(this);
-
   }
 
   componentDidMount() {
     this.getDataSets('one');
-    this.getTableData();
   }
 
-  getDataSets(s) {
-    const {
-      red,blue,yellow,green,
-      redh,blueh,yellowh,greenh} = colors;
-    let sel = s, sum = [];
-    let pdata = this.props.data;
-    let pOne = Object.values(pdata[0]);
-    let pTwo = Object.values(pdata[1]);
+  getDataSets(sel) {
+    const {red,blue,yellow,green,redh,blueh,yellowh,greenh} = colors;
+    let {tableData} = this.state;
+    let tableOne = {}, tableTwo ={},table = [];
+    tableOne = tableData[0];
+    tableTwo = tableData[1];
 
     const getData = (sel) => {
       if(sel === 'one') {
-        return pOne;
+        return Object.values(tableOne);
       }
       else if(sel === 'all') {
-        pOne.forEach((itm,idx) => {
-          sum += itm + pTwo[idx] + ',';
-        });
-        sum = sum.split(',');
-        sum = sum.map(itm => parseInt(itm,10));
-        return sum;
+        for(let key in tableOne) {
+          key = key.toLowerCase();
+          for(let prop in tableTwo) {
+            prop = prop.toLowerCase();
+            if(key === prop) {
+              table.push(tableOne[key]+tableTwo[key]);
+            }
+          }
+        }
+        return table;
       }
     };
 
@@ -60,7 +59,7 @@ class DoughnutChart extends Component {
     ];
 
     return this.setState({
-      datasets:datasets,
+      datasets,
     });
   }
 
@@ -79,16 +78,7 @@ class DoughnutChart extends Component {
     }
   }
 
-  getTableData() {
-    let cd = tableData;
-    return this.setState({
-      tableData: cd,
-    });
-  }
-
-
   render() {
-    console.log(this);
     const {datasets,tableData,additionalData} = this.state;
     const {width,height} = this.props;
 
