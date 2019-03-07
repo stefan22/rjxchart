@@ -11,14 +11,8 @@ class Dashboard extends Component {
     this.state = {
       isLoading: false,
       tableData: [],
-      dmax:null,
-      dheight:null,
-      dOptions: {
-        maintainAspectRadio:false,
-      },
     };
     this.getChartData = this.getChartData.bind(this);
-    this.setDoughnutChart = this.setDoughnutChart.bind(this);
   }
 
   componentDidMount() {
@@ -27,7 +21,6 @@ class Dashboard extends Component {
     });
 
     this.getChartData();
-    this.setDoughnutChart();
 
     setTimeout(() => {//optional
       this.setState((prevState) => ({
@@ -43,20 +36,8 @@ class Dashboard extends Component {
     });
   }
 
-  setDoughnutChart(dmx=650,dh='auto') {
-    let dmaxWidth = dmx;
-    let dheight = dh;
-
-    return this.setState({
-      dmax:dmaxWidth,
-      dheight:dheight,
-    });
-  }
-
   render() {
-    const {
-      isLoading, tableData, dheight, dOptions,dmax,legend} = this.state;
-
+    const {isLoading, tableData} = this.state;
     return (
       <div className=
         {`mid-section-wrapper ${(isLoading) ? '' : 'loading'}`}>
@@ -71,11 +52,10 @@ class Dashboard extends Component {
                     (tableData.length) &&
 
                         <DoughnutChart
-                          width= {dmax}
-                          height= {dheight}
-                          options={dOptions}
+                          width= {650}
+                          height={'auto'}
                           tableData={tableData}
-                          legend={legend}
+
                         />
                   }
 
